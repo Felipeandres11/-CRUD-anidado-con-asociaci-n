@@ -10,6 +10,13 @@ class CompaniesController < ApplicationController
   # GET /companies/1
   # GET /companies/1.json
   def show
+    @employee = Employee.new
+    @area = Area.all
+
+    @area.each do |a|
+      a.name
+    end
+
   end
 
   # GET /companies/new
@@ -71,4 +78,6 @@ class CompaniesController < ApplicationController
     def company_params
       params.require(:company).permit(:name)
     end
+
+
 end

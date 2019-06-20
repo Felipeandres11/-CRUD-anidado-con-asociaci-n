@@ -1,4 +1,4 @@
 class Area < ApplicationRecord
 
-  has_many: Employees
+  has_many :Employees
 end
